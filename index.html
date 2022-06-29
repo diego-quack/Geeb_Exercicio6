@@ -40,6 +40,20 @@
         </div>
     </div>
     <script src="js/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.num_btn').on('click', function(){
+                $('.interface').val($('.interface').val() + $(this).html());
+            })
+            $('.resultado').on('click', function(){
+                multiplicacao = $('.interface').val();
+                if(multiplicacao.includes('x')){
+                    multiplicacao = multiplicacao.replace('x', '*');
+                }
+                $('.interface').val(eval(multiplicacao));
+            })
+        })
+    </script>
 </body>
 
 </html>
