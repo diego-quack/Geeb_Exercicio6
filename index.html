@@ -56,6 +56,9 @@
                 if(calc.includes('x')){
                     calc = calc.replace('x', '*');
                 }
+                if(calc.includes('÷')){
+                    calc = calc.replace('÷', '/');
+                }
                 $('.interface').val(eval(calc));
             })
         })
