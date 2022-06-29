@@ -11,30 +11,30 @@
 
 <body>
     <div class="calculadora">
-        <input type="text" class="interface" value="0" readonly>
+        <input type="text" class="interface" value="" readonly>
         <div>
             <button type="button" class="zerar">C</button>
-            <button type="button" class="divisao">/</button>
+            <button type="button" class="in_btn">÷</button>
         </div>
         <div>
-            <button type="button" class="num_btn">7</button>
-            <button type="button" class="num_btn">8</button>
-            <button type="button" class="num_btn">9</button>
-            <button type="button" class="num_btn">x</button>
+            <button type="button" class="in_btn">7</button>
+            <button type="button" class="in_btn">8</button>
+            <button type="button" class="in_btn">9</button>
+            <button type="button" class="in_btn">x</button>
         </div>
         <div>
-            <button type="button" class="num_btn">4</button>
-            <button type="button" class="num_btn">5</button>
-            <button type="button" class="num_btn">6</button>
-            <button type="button" class="num_btn">-</button>
+            <button type="button" class="in_btn">4</button>
+            <button type="button" class="in_btn">5</button>
+            <button type="button" class="in_btn">6</button>
+            <button type="button" class="in_btn">-</button>
         </div>
         <div>
-            <button type="button" class="num_btn">1</button>
-            <button type="button" class="num_btn">2</button>
-            <button type="button" class="num_btn">3</button>
-            <button type="button" class="num_btn">+</button>
+            <button type="button" class="in_btn">1</button>
+            <button type="button" class="in_btn">2</button>
+            <button type="button" class="in_btn">3</button>
+            <button type="button" class="in_btn">+</button>
         </div>
-        <div>
+        <div >
             <button type="button" class="zero">0</button>
             <button type="button" class="resultado">=</button>
         </div>
@@ -42,15 +42,21 @@
     <script src="js/jquery-3.6.0.js"></script>
     <script type="text/javascript">
         $(function(){
-            $('.num_btn').on('click', function(){
+            $('.in_btn').on('click', function(){
                 $('.interface').val($('.interface').val() + $(this).html());
             })
+            $('.zero').on('click', function(){
+                $('.interface').val($('.interface').val() + $(this).html());
+            })
+            $('.zerar').on('click', function(){
+                $('.interface').val('');
+            })
             $('.resultado').on('click', function(){
-                multiplicacao = $('.interface').val();
-                if(multiplicacao.includes('x')){
-                    multiplicacao = multiplicacao.replace('x', '*');
+                calc = $('.interface').val();
+                if(calc.includes('x')){
+                    calc = calc.replace('x', '*');
                 }
-                $('.interface').val(eval(multiplicacao));
+                $('.interface').val(eval(calc));
             })
         })
     </script>
