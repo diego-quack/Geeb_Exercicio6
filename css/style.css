@@ -3,10 +3,40 @@
     margin: 0;
     padding: 0;
 }
+.calculadora{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.interface{
+    width: 180px;
+    height: 35px;
+    margin: 2px;
+    text-align: right;
+}
 button{
     width: 40px;
     height: 40px;
     margin: 2px;
-    font-size: 16px;
-    color: gray;
+    font-size: 13px;
+    background-color: rgb(173, 173, 173);
+    color: white;
+    border-radius: 3px;
+    border-width: 1px;
+    font-family: tahoma;
+}
+.zerar{
+    width: 136px;
+    background-color: rgb(71, 108, 211);
+    color: white;
+    font-size: 13px;
+}
+.zero{
+    width: 136px;
+    font-size: 13px;
+}
+.resultado{
+    background-color: rgb(95, 171, 95);
+    color: white;
 }
